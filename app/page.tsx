@@ -1,6 +1,9 @@
 import AboutPreview from "@/components/AboutPreview";
+import FeaturedWork from "@/components/FeaturedWork";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 
 export default function Home() {
@@ -11,7 +14,10 @@ export default function Home() {
         <Hero />
         <Stats />
         <AboutPreview />
+        <FeaturedWork />
+        <Services />
       </main>
+      <Footer />
     </>
   );
 }
