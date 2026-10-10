@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import ProjectsPanel from "@/components/admin/ProjectsPanel";
+import BlogPostsPanel from "@/components/admin/BlogPostsPanel";
 
 type Tab = "projects" | "blog";
 
@@ -64,13 +65,7 @@ export default function AdminDashboardPage() {
         </div>
 
         <div className="mt-8">
-          {tab === "projects" ? (
-            <ProjectsPanel />
-          ) : (
-            <p className="rounded-2xl border border-dashed border-charcoal/20 px-6 py-12 text-center text-charcoal-light/60">
-              Blog post management is coming next.
-            </p>
-          )}
+          {tab === "projects" ? <ProjectsPanel /> : <BlogPostsPanel />}
         </div>
       </div>
     </main>
