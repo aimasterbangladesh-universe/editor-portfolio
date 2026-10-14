@@ -16,9 +16,30 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_DESCRIPTION =
+  "Senior video editor with 15+ years cutting news, documentary, corporate and short-form work.";
+
 export const metadata: Metadata = {
-  title: "Yogesh Kisan Gonnade",
-  description: "Portfolio of Yogesh Kisan Gonnade",
+  // Needed so relative social-image URLs resolve to absolute ones.
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
+  title: {
+    default: "Yogesh Gonnade — Senior Video Editor",
+    template: "%s",
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: "Yogesh Gonnade — Senior Video Editor",
+    description: SITE_DESCRIPTION,
+    type: "website",
+    siteName: "Yogesh Gonnade",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yogesh Gonnade — Senior Video Editor",
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
