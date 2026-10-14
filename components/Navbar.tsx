@@ -6,12 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Services", href: "#" },
+  { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "#" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -59,7 +59,7 @@ export default function Navbar() {
         className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
       >
         <Link
-          href="#"
+          href="/"
           className="font-heading text-lg font-bold text-charcoal transition-colors hover:text-orange sm:text-xl"
         >
           Yogesh Gonnade
@@ -80,7 +80,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="#"
+            href="/contact"
             className="hidden rounded-full bg-orange px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-dark md:inline-block"
           >
             Hire Me
@@ -144,7 +144,7 @@ export default function Navbar() {
               </ul>
 
               <Link
-                href="#"
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="mt-8 rounded-full bg-orange px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
               >

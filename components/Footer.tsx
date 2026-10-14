@@ -3,22 +3,15 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
-
-// NOTE: email, location and availability below are PLACEHOLDERS.
-// Replace them once the real contact details are provided.
-const CONTACT = {
-  email: "hello@yogeshgonnade.com",
-  location: "Based in Noida, India",
-  availability: "Available for remote projects worldwide",
-};
+import { CONTACT } from "@/lib/site-info";
 
 const QUICK_LINKS = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
   { label: "Work", href: "/portfolio" },
-  { label: "Services", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Services", href: "/services" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const SERVICES = [
@@ -127,9 +120,9 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               {SERVICES.map((label) => (
                 <li key={label}>
-                  <a href="#" className={linkClass}>
+                  <Link href="/services" className={linkClass}>
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -149,12 +142,12 @@ export default function Footer() {
               <li>{CONTACT.location}</li>
               <li>{CONTACT.availability}</li>
             </ul>
-            <a
-              href="#"
+            <Link
+              href="/contact"
               className="mt-6 inline-block rounded-full bg-orange px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
             >
               Hire Me
-            </a>
+            </Link>
           </motion.div>
         </div>
 

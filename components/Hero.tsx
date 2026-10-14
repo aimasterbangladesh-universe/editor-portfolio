@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 const container: Variants = {
@@ -76,18 +77,18 @@ export default function Hero() {
           variants={fadeUp}
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <a
-            href="#"
+          <Link
+            href="/portfolio"
             className="w-full rounded-full bg-orange px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-orange-dark sm:w-auto"
           >
             View My Work
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/contact"
             className="w-full rounded-full border-2 border-charcoal px-8 py-3.5 text-center text-sm font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-background sm:w-auto"
           >
             Get In Touch
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

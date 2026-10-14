@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 
 const fadeUp: Variants = {
@@ -66,12 +67,12 @@ export default function AboutPreview() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-8">
-            <a
-              href="#"
+            <Link
+              href="/about"
               className="inline-block rounded-full border-2 border-charcoal px-8 py-3.5 text-sm font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-background"
             >
               Read Full Story
-            </a>
+            </Link>
           </motion.div>
         </div>
       </motion.div>
