@@ -61,7 +61,7 @@ export default function Hero() {
           className="text-balance font-heading text-4xl font-extrabold leading-tight tracking-tight text-charcoal sm:text-6xl lg:text-7xl"
         >
           Crafting Stories Through{" "}
-          <span className="text-orange">the Edit</span>
+          <span className="text-orange-display">the Edit</span>
         </motion.h1>
 
         <motion.p
