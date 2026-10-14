@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Mail } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
 
@@ -11,7 +12,14 @@ const CONTACT = {
   availability: "Available for remote projects worldwide",
 };
 
-const QUICK_LINKS = ["Home", "About", "Work", "Services", "Blog", "Contact"];
+const QUICK_LINKS = [
+  { label: "Home", href: "#" },
+  { label: "About", href: "#" },
+  { label: "Work", href: "/portfolio" },
+  { label: "Services", href: "#" },
+  { label: "Blog", href: "#" },
+  { label: "Contact", href: "#" },
+];
 
 const SERVICES = [
   "News & Media Editing",
@@ -104,11 +112,11 @@ export default function Footer() {
           <motion.div variants={fadeUp}>
             <h2 className={headingClass}>Quick Links</h2>
             <ul className="mt-4 space-y-3">
-              {QUICK_LINKS.map((label) => (
+              {QUICK_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <a href="#" className={linkClass}>
+                  <Link href={href} className={linkClass}>
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
