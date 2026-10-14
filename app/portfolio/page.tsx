@@ -29,7 +29,7 @@ export default async function PortfolioPage() {
       <Navbar />
       <main className="bg-background">
         <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-dark-text">
             Portfolio
           </p>
           <h1 className="mt-4 text-balance font-heading text-4xl font-bold leading-tight tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
@@ -43,7 +43,7 @@ export default async function PortfolioPage() {
           {error ? (
             <p
               role="alert"
-              className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/60"
+              className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/70"
             >
               Could not load projects right now. Please try again later.
             </p>

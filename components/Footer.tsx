@@ -144,7 +144,7 @@ export default function Footer() {
             </ul>
             <Link
               href="/contact"
-              className="mt-6 inline-block rounded-full bg-orange px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
+              className="mt-6 inline-block rounded-full bg-orange px-6 py-2.5 text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light"
             >
               Hire Me
             </Link>

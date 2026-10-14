@@ -67,7 +67,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="bg-background">
         <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-dark-text">
             About Me
           </p>
           <h1 className="mt-4 max-w-4xl text-balance font-heading text-4xl font-bold leading-tight tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
@@ -143,7 +143,7 @@ export default function AboutPage() {
           <div className="mt-16 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/portfolio"
-              className="rounded-full bg-orange px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
+              className="rounded-full bg-orange px-8 py-3.5 text-center text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light"
             >
               View My Work
             </Link>

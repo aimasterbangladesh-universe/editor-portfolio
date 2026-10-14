@@ -130,14 +130,14 @@ export default function BlogPostsPanel() {
       <div className="flex items-center justify-between gap-4">
         <h2 className="font-heading text-xl font-bold text-charcoal">
           Blog Posts{" "}
-          <span className="font-sans text-sm font-normal text-charcoal-light/60">
+          <span className="font-sans text-sm font-normal text-charcoal-light/70">
             ({posts.length})
           </span>
         </h2>
         <button
           type="button"
           onClick={openCreateForm}
-          className="inline-flex items-center gap-2 rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
+          className="inline-flex items-center gap-2 rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light"
         >
           <Plus size={16} aria-hidden="true" />
           Add New Post
@@ -145,7 +145,7 @@ export default function BlogPostsPanel() {
       </div>
 
       {error ? (
-        <p role="alert" className="mt-4 text-sm font-medium text-orange-dark">
+        <p role="alert" className="mt-4 text-sm font-medium text-orange-dark-text">
           {error}
         </p>
       ) : null}
@@ -240,7 +240,7 @@ export default function BlogPostsPanel() {
           </div>
 
           {formError ? (
-            <p role="alert" className="mt-4 text-sm font-medium text-orange-dark">
+            <p role="alert" className="mt-4 text-sm font-medium text-orange-dark-text">
               {formError}
             </p>
           ) : null}
@@ -249,7 +249,7 @@ export default function BlogPostsPanel() {
             <button
               type="submit"
               disabled={saving}
-              className="rounded-full bg-orange px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-dark disabled:opacity-60"
+              className="rounded-full bg-orange px-6 py-2.5 text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light disabled:opacity-60"
             >
               {saving ? "Saving…" : editingId ? "Save Changes" : "Create Post"}
             </button>
@@ -266,7 +266,7 @@ export default function BlogPostsPanel() {
 
       <div className="mt-6 overflow-x-auto rounded-2xl border border-charcoal/10 bg-white">
         <table className="w-full text-left text-sm">
-          <thead className="border-b border-charcoal/10 text-xs uppercase tracking-wider text-charcoal-light/60">
+          <thead className="border-b border-charcoal/10 text-xs uppercase tracking-wider text-charcoal-light/70">
             <tr>
               <th className="px-5 py-3 font-semibold">Title</th>
               <th className="px-5 py-3 font-semibold">Slug</th>
@@ -277,13 +277,13 @@ export default function BlogPostsPanel() {
           <tbody>
             {loading ? (
               <tr>
-                <td colSpan={4} className="px-5 py-8 text-center text-charcoal-light/60">
+                <td colSpan={4} className="px-5 py-8 text-center text-charcoal-light/70">
                   Loading…
                 </td>
               </tr>
             ) : posts.length === 0 ? (
               <tr>
-                <td colSpan={4} className="px-5 py-8 text-center text-charcoal-light/60">
+                <td colSpan={4} className="px-5 py-8 text-center text-charcoal-light/70">
                   No blog posts yet. Use “Add New Post” to create the first one.
                 </td>
               </tr>
@@ -298,11 +298,11 @@ export default function BlogPostsPanel() {
                   </td>
                   <td className="px-5 py-4">
                     {post.published ? (
-                      <span className="rounded-full bg-orange px-2.5 py-1 text-xs font-semibold text-white">
+                      <span className="rounded-full bg-orange px-2.5 py-1 text-xs font-semibold text-charcoal">
                         Published
                       </span>
                     ) : (
-                      <span className="rounded-full border border-charcoal/20 px-2.5 py-1 text-xs font-semibold text-charcoal-light/60">
+                      <span className="rounded-full border border-charcoal/20 px-2.5 py-1 text-xs font-semibold text-charcoal-light/70">
                         Draft
                       </span>
                     )}
@@ -317,7 +317,7 @@ export default function BlogPostsPanel() {
                           type="button"
                           onClick={() => handleDelete(post.id)}
                           disabled={deletingId === post.id}
-                          className="rounded-full bg-orange-dark px-3 py-1.5 text-xs font-semibold text-white disabled:opacity-60"
+                          className="rounded-full bg-orange-dark-text px-3 py-1.5 text-xs font-semibold text-white disabled:opacity-60"
                         >
                           {deletingId === post.id ? "Deleting…" : "Yes, delete"}
                         </button>
@@ -335,7 +335,7 @@ export default function BlogPostsPanel() {
                           type="button"
                           onClick={() => openEditForm(post)}
                           aria-label={`Edit ${post.title}`}
-                          className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/20 px-3 py-1.5 text-xs font-semibold text-charcoal transition-colors hover:border-orange hover:text-orange"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/20 px-3 py-1.5 text-xs font-semibold text-charcoal transition-colors hover:border-orange hover:text-orange-dark-text"
                         >
                           <Pencil size={13} aria-hidden="true" />
                           Edit
@@ -344,7 +344,7 @@ export default function BlogPostsPanel() {
                           type="button"
                           onClick={() => setConfirmingDeleteId(post.id)}
                           aria-label={`Delete ${post.title}`}
-                          className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/20 px-3 py-1.5 text-xs font-semibold text-charcoal transition-colors hover:border-orange-dark hover:text-orange-dark"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/20 px-3 py-1.5 text-xs font-semibold text-charcoal transition-colors hover:border-orange-dark hover:text-orange-dark-text"
                         >
                           <Trash2 size={13} aria-hidden="true" />
                           Delete

@@ -79,7 +79,7 @@ export default function AdminLoginPage() {
               <p
                 id="login-error"
                 role="alert"
-                className="mt-3 text-sm font-medium text-orange-dark"
+                className="mt-3 text-sm font-medium text-orange-dark-text"
               >
                 {error}
               </p>
@@ -88,7 +88,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={submitting}
-              className="mt-6 w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-dark disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-6 w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submitting ? "Logging in…" : "Login"}
             </button>

@@ -60,7 +60,7 @@ export default function Navbar() {
       >
         <Link
           href="/"
-          className="font-heading text-lg font-bold text-charcoal transition-colors hover:text-orange sm:text-xl"
+          className="font-heading text-lg font-bold text-charcoal transition-colors hover:text-orange-dark-text sm:text-xl"
         >
           Yogesh Gonnade
         </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-charcoal-light transition-colors hover:text-orange"
+                className="text-sm font-medium text-charcoal-light transition-colors hover:text-orange-dark-text"
               >
                 {link.label}
               </Link>
@@ -81,7 +81,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Link
             href="/contact"
-            className="hidden rounded-full bg-orange px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-dark md:inline-block"
+            className="hidden rounded-full bg-orange px-5 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light md:inline-block"
           >
             Hire Me
           </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            className="rounded-md p-2 text-charcoal transition-colors hover:text-orange md:hidden"
+            className="rounded-md p-2 text-charcoal transition-colors hover:text-orange-dark-text md:hidden"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -124,7 +124,7 @@ export default function Navbar() {
                 type="button"
                 onClick={() => setMenuOpen(false)}
                 aria-label="Close menu"
-                className="mb-8 self-end rounded-md p-2 text-charcoal transition-colors hover:text-orange"
+                className="mb-8 self-end rounded-md p-2 text-charcoal transition-colors hover:text-orange-dark-text"
               >
                 <X size={24} />
               </button>
@@ -135,7 +135,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
-                      className="font-heading text-lg font-semibold text-charcoal transition-colors hover:text-orange"
+                      className="font-heading text-lg font-semibold text-charcoal transition-colors hover:text-orange-dark-text"
                     >
                       {link.label}
                     </Link>
@@ -146,7 +146,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="mt-8 rounded-full bg-orange px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
+                className="mt-8 rounded-full bg-orange px-5 py-3 text-center text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light"
               >
                 Hire Me
               </Link>

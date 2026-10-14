@@ -83,7 +83,7 @@ export default function FeaturedWork() {
         >
           <Link
             href="/portfolio"
-            className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-orange hover:bg-orange"
+            className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-orange hover:bg-orange hover:text-charcoal"
           >
             View All Work
           </Link>

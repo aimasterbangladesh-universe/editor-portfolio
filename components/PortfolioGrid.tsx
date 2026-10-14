@@ -25,7 +25,7 @@ function Thumbnail({ project }: { project: Project }) {
       )}
 
       {project.is_featured ? (
-        <span className="absolute left-3 top-3 rounded-full bg-orange px-2.5 py-1 text-xs font-semibold text-white">
+        <span className="absolute left-3 top-3 rounded-full bg-orange px-2.5 py-1 text-xs font-semibold text-charcoal">
           Featured
         </span>
       ) : null}
@@ -37,7 +37,7 @@ function CardBody({ project }: { project: Project }) {
   return (
     <>
       <Thumbnail project={project} />
-      <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-orange">
+      <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-orange-dark-text">
         {project.category}
       </p>
       <h2 className="mt-2 font-heading text-lg font-bold text-charcoal">
@@ -62,7 +62,7 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
 
   if (projects.length === 0) {
     return (
-      <p className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/60">
+      <p className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/70">
         No projects yet.
       </p>
     );
@@ -79,8 +79,8 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
             aria-pressed={activeFilter === filter}
             className={`rounded-full border px-5 py-2 text-sm font-semibold transition-colors ${
               activeFilter === filter
-                ? "border-orange bg-orange text-white"
-                : "border-charcoal/15 text-charcoal-light/75 hover:border-orange hover:text-orange"
+                ? "border-orange bg-orange text-charcoal"
+                : "border-charcoal/15 text-charcoal-light/75 hover:border-orange hover:text-orange-dark-text"
             }`}
           >
             {filter}
@@ -89,7 +89,7 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
       </div>
 
       {visible.length === 0 ? (
-        <p className="mt-10 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/60">
+        <p className="mt-10 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/70">
           No projects in “{activeFilter}” yet.
         </p>
       ) : (

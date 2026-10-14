@@ -55,8 +55,8 @@ export default function AdminDashboardPage() {
               onClick={() => setTab(id)}
               className={`-mb-px border-b-2 px-4 py-3 text-sm font-semibold transition-colors ${
                 tab === id
-                  ? "border-orange text-orange"
-                  : "border-transparent text-charcoal-light/60 hover:text-charcoal"
+                  ? "border-orange text-orange-dark-text"
+                  : "border-transparent text-charcoal-light/70 hover:text-charcoal"
               }`}
             >
               {label}

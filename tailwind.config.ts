@@ -13,6 +13,10 @@ const config: Config = {
           DEFAULT: "#FF5A1F",
           light: "#FF7A47",
           dark: "#E04A15",
+          // Small orange text on the off-white background only. #FF5A1F is
+          // 2.98:1 there, which fails WCAG AA; this is 5.52:1. Large display
+          // text and orange on charcoal keep using DEFAULT.
+          "dark-text": "#B33F16",
         },
         charcoal: {
           DEFAULT: "#1A1A1A",

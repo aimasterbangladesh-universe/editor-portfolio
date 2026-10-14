@@ -16,7 +16,7 @@ export default function ServicesPage() {
       <Navbar />
       <main className="bg-background">
         <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-dark-text">
             What I Do
           </p>
           <h1 className="mt-4 text-balance font-heading text-4xl font-bold leading-tight tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
@@ -42,7 +42,7 @@ export default function ServicesPage() {
             </p>
             <Link
               href="/contact"
-              className="mt-7 inline-block rounded-full bg-orange px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
+              className="mt-7 inline-block rounded-full bg-orange px-8 py-3.5 text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light"
             >
               Get In Touch
             </Link>

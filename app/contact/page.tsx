@@ -33,7 +33,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="bg-background">
         <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-dark-text">
             Contact
           </p>
           <h1 className="mt-4 text-balance font-heading text-4xl font-bold leading-tight tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
@@ -57,7 +57,7 @@ export default function ContactPage() {
                     </span>
                     <a
                       href={`mailto:${CONTACT.email}`}
-                      className="text-sm text-charcoal-light/75 transition-colors hover:text-orange"
+                      className="text-sm text-charcoal-light/75 transition-colors hover:text-orange-dark-text"
                     >
                       {CONTACT.email}
                     </a>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 </li>
               </ul>
 
-              <h2 className="mt-10 text-sm font-semibold uppercase tracking-[0.15em] text-orange">
+              <h2 className="mt-10 text-sm font-semibold uppercase tracking-[0.15em] text-orange-dark-text">
                 Social
               </h2>
               <ul className="mt-4 flex flex-wrap gap-3">
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   <li key={label}>
                     <a
                       href={href}
-                      className="inline-block rounded-full border border-charcoal/15 px-5 py-2 text-sm font-semibold text-charcoal-light/75 transition-colors hover:border-orange hover:text-orange"
+                      className="inline-block rounded-full border border-charcoal/15 px-5 py-2 text-sm font-semibold text-charcoal-light/75 transition-colors hover:border-orange hover:text-orange-dark-text"
                     >
                       {label}
                     </a>
@@ -162,7 +162,7 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="mt-6 w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
+                className="mt-6 w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light"
               >
                 Open in Email App
               </button>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   to{" "}
                   <a
                     href={`mailto:${CONTACT.email}`}
-                    className="font-medium text-orange"
+                    className="font-medium text-orange-dark-text"
                   >
                     {CONTACT.email}
                   </a>{" "}

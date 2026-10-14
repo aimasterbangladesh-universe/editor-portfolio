@@ -79,7 +79,7 @@ export default function Hero() {
         >
           <Link
             href="/portfolio"
-            className="w-full rounded-full bg-orange px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-orange-dark sm:w-auto"
+            className="w-full rounded-full bg-orange px-8 py-3.5 text-center text-sm font-semibold text-charcoal transition-colors hover:bg-orange-light sm:w-auto"
           >
             View My Work
           </Link>

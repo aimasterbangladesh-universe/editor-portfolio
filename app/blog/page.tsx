@@ -30,7 +30,7 @@ export default async function BlogPage() {
       <Navbar />
       <main className="bg-background">
         <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-dark-text">
             Blog
           </p>
           <h1 className="mt-4 text-balance font-heading text-4xl font-bold leading-tight tracking-tight text-charcoal sm:text-5xl lg:text-6xl">
@@ -44,12 +44,12 @@ export default async function BlogPage() {
           {error ? (
             <p
               role="alert"
-              className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/60"
+              className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/70"
             >
               Could not load posts right now. Please try again later.
             </p>
           ) : posts.length === 0 ? (
-            <p className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/60">
+            <p className="mt-14 rounded-2xl border border-dashed border-charcoal/20 px-6 py-16 text-center text-charcoal-light/70">
               No posts yet.
             </p>
           ) : (
@@ -78,7 +78,7 @@ export default async function BlogPage() {
 
                   <time
                     dateTime={post.created_at}
-                    className="mt-5 block text-xs font-semibold uppercase tracking-[0.2em] text-orange"
+                    className="mt-5 block text-xs font-semibold uppercase tracking-[0.2em] text-orange-dark-text"
                   >
                     {formatPostDate(post.created_at)}
                   </time>

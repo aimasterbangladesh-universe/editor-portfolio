@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <article className="mx-auto max-w-3xl px-6 py-20 sm:py-28">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal-light/70 transition-colors hover:text-orange"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal-light/70 transition-colors hover:text-orange-dark-text"
           >
             <ArrowLeft size={16} aria-hidden="true" />
             Back to blog
@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           <time
             dateTime={post.created_at}
-            className="mt-10 block text-xs font-semibold uppercase tracking-[0.2em] text-orange"
+            className="mt-10 block text-xs font-semibold uppercase tracking-[0.2em] text-orange-dark-text"
           >
             {formatPostDate(post.created_at)}
           </time>
@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               ))}
             </div>
           ) : (
-            <p className="mt-10 text-charcoal-light/60">
+            <p className="mt-10 text-charcoal-light/70">
               This post has no content yet.
             </p>
           )}

@@ -14,7 +14,7 @@ export default function Services() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-dark-text">
             What I Do
           </p>
           <h2 className="mt-4 text-balance font-heading text-3xl font-bold leading-tight tracking-tight text-charcoal sm:text-4xl lg:text-5xl">

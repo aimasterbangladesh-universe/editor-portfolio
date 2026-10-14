@@ -34,7 +34,7 @@ export default function AboutPreview() {
         <div>
           <motion.p
             variants={fadeUp}
-            className="text-sm font-semibold uppercase tracking-[0.2em] text-orange"
+            className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-dark-text"
           >
             About Me
           </motion.p>
