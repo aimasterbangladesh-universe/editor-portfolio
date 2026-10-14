@@ -60,3 +60,16 @@ export function parseBlogPostPayload(
     },
   };
 }
+
+/**
+ * Formatted on the server with an explicit locale and timezone so the output
+ * is deterministic — the machine's locale must not change what renders.
+ */
+export function formatPostDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}

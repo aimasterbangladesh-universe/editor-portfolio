@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { Play } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 
@@ -57,7 +58,7 @@ export default function FeaturedWork() {
               }}
               className="group"
             >
-              <a href="#" className="block">
+              <Link href="#" className="block">
                 <div className="flex aspect-video items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition-colors duration-300 group-hover:border-orange">
                   <span className="flex h-14 w-14 items-center justify-center rounded-full bg-orange text-white transition-transform duration-300 group-hover:scale-110">
                     <Play size={22} fill="currentColor" aria-hidden="true" />
@@ -69,7 +70,7 @@ export default function FeaturedWork() {
                 <h3 className="mt-2 font-heading text-lg font-bold text-white">
                   {title}
                 </h3>
-              </a>
+              </Link>
             </motion.article>
           ))}
         </div>
@@ -80,12 +81,12 @@ export default function FeaturedWork() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.45 }}
           className="mt-14 text-center"
         >
-          <a
+          <Link
             href="/portfolio"
             className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-orange hover:bg-orange"
           >
             View All Work
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

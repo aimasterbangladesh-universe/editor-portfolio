@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -9,7 +10,7 @@ const NAV_LINKS = [
   { label: "About", href: "#" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Services", href: "#" },
-  { label: "Blog", href: "#" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "#" },
 ];
 
@@ -57,33 +58,33 @@ export default function Navbar() {
         aria-label="Main"
         className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
       >
-        <a
+        <Link
           href="#"
           className="font-heading text-lg font-bold text-charcoal transition-colors hover:text-orange sm:text-xl"
         >
           Yogesh Gonnade
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
-              <a
+              <Link
                 href={link.href}
                 className="text-sm font-medium text-charcoal-light transition-colors hover:text-orange"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
+          <Link
             href="#"
             className="hidden rounded-full bg-orange px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-dark md:inline-block"
           >
             Hire Me
-          </a>
+          </Link>
 
           <button
             type="button"
@@ -131,24 +132,24 @@ export default function Navbar() {
               <ul className="flex flex-col gap-6">
                 {NAV_LINKS.map((link) => (
                   <li key={link.label}>
-                    <a
+                    <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
                       className="font-heading text-lg font-semibold text-charcoal transition-colors hover:text-orange"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
 
-              <a
+              <Link
                 href="#"
                 onClick={() => setMenuOpen(false)}
                 className="mt-8 rounded-full bg-orange px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
               >
                 Hire Me
-              </a>
+              </Link>
             </motion.div>
           </>
         )}
