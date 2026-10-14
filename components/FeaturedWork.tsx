@@ -81,7 +81,7 @@ export default function FeaturedWork() {
           className="mt-14 text-center"
         >
           <a
-            href="#"
+            href="/portfolio"
             className="inline-block rounded-full border-2 border-white px-8 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:border-orange hover:bg-orange"
           >
             View All Work
