@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { SITE_URL } from "@/lib/site-url";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -21,9 +22,7 @@ const SITE_DESCRIPTION =
 
 export const metadata: Metadata = {
   // Needed so relative social-image URLs resolve to absolute ones.
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Yogesh Gonnade — Senior Video Editor",
     template: "%s",

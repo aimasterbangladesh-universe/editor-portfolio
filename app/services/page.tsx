@@ -29,7 +29,7 @@ export default function ServicesPage() {
           </p>
 
           <div className="mt-14">
-            <ServiceCards />
+            <ServiceCards headingLevel="h2" />
           </div>
 
           <div className="mt-16 rounded-2xl border border-charcoal/10 bg-white p-8 text-center sm:p-12">

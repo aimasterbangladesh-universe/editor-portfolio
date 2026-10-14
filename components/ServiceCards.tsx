@@ -4,8 +4,19 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { SERVICES } from "@/lib/services";
 
-/** Shared by the homepage Services section and the /services page. */
-export default function ServiceCards() {
+/**
+ * Shared by the homepage Services section and the /services page.
+ *
+ * The homepage nests these under an <h2>, so cards are <h3> there. The
+ * /services page has no intervening heading, so they must be <h2> or the
+ * document skips a level.
+ */
+export default function ServiceCards({
+  headingLevel = "h3",
+}: {
+  headingLevel?: "h2" | "h3";
+}) {
+  const Heading = headingLevel;
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.15 });
 
@@ -30,9 +41,9 @@ export default function ServiceCards() {
           <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange text-white">
             <Icon size={22} aria-hidden="true" />
           </span>
-          <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
+          <Heading className="mt-6 font-heading text-xl font-bold text-charcoal">
             {title}
-          </h3>
+          </Heading>
           <p className="mt-3 text-sm leading-relaxed text-charcoal-light/75">
             {body}
           </p>
